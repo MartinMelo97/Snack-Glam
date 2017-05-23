@@ -3,13 +3,19 @@ $('document').ready(function(){
     // $('.logo_nav').css({'margin-top':'50vh'});
     var paddingtop = $('#elnav').height();
     console.log(typeof(paddingtop));
-    $('.video-container').css({'padding-top':paddingtop.toString()+" px"});
+    $('.video-containerr').css({'padding-top':paddingtop.toString()+" px"});
     console.log(paddingtop.toString());
-    console.log($('.video-container').css('padding-top'));
+    console.log($('.video-containerr').css('padding-top'));
 });
 
 var video = $('#video-background').get(0);
 $('.video-container').click(function(){
+    console.log("toco");
+    video.play();
+    $('.text').delay(500).show(1000);
+});
+
+$('.text').click(function(){
     console.log("toco");
     video.play();
 });

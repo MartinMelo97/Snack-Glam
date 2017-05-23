@@ -7,11 +7,19 @@ body{
     background-color: #fff;
 }
 .primary-color-back{
-    background-color: #07BDBF;
+    background-color: #07BDBF !important;
 }
 
 .primary-color{
     color: #07BDBF;
+}
+
+.video-container{
+    position: relative;
+    background-size: cover;
+    overflow: hidden;
+    height: 90.5vh !important;
+    padding-bottom: 0 !important;
 }
 
 .accent-color-back{
@@ -27,13 +35,48 @@ a > .logo_nav{
 
 #video-background {
 /*  making the video fullscreen  */
-  position: fixed;
-  right: 0; 
-  bottom: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); 
   min-width: 100%; 
-  height: 100%;
   min-height: 100%;
   width: auto; 
   height: auto;
   z-index: -100;
+}
+
+.text {
+    position: absolute;
+    /*background-color: #745842;*/
+    background-color: rgba(0,0,0,0.7);
+    top: 50%;
+    width: 50vw;
+    height: 70vh;
+    left: 50%;
+    text-align: center;
+    margin-left: -25vw;
+    margin-top: -35vh;
+    display: none;
+}
+
+@media screen and (max-width: 768px)
+{
+
+    #video-background {
+        height: auto;
+    }
+
+    .text {
+        width: 90vw;
+        margin-left: -45vw;
+    }
+
+    
+}
+
+
+.slogan {
+    font-weight: 600;
+    font-family: 'Roboto';
 }
