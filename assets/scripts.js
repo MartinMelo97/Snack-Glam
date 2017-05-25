@@ -12,7 +12,8 @@ var video = $('#video-background').get(0);
 $('.video-container').click(function(){
     console.log("toco");
     video.play();
-    $('.text').delay(500).show(1000);
+    $('.text').addClass('animated bounceInUp');
+    $('.text').css({display:'flex','align-items':'center'});
 });
 
 $('.text').click(function(){

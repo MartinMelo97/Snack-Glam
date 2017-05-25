@@ -6,6 +6,7 @@
     <title>Snack & Glam</title>
     <link rel="stylesheet" href="assets/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
@@ -42,26 +43,26 @@
     
     <main>
         <div class="video-container">
-        <video autobuffer loop id="video-background">
+        <video autobuffer loop autoplay id="video-background" poster="images/letters-back-poster.jpg">
             <source src="images/back.mp4">
         </video>
-        <div class="text z-depth-5 valign-wrapper">
+        <div class="text z-depth-5">
             <div class="container white-text">
                 <div class="row">
                     <div class="col s12">
                         <h2 class="slogan">Aquí va el slogan</h2>
                     </div>
                 <div class="row">
-                    <div class="col s3"></div>
-                    <div class="col s6">
-                        <img src="images/they.jpg" alt="" class="responsive-img">
+                    <div class="col s2"></div>
+                    <div class="col s8">
+                        <img src="images/stand.jpg" alt="" class="responsive-img">
                     </div>
-                    <div class="col s3"></div>
+                    <div class="col s2"></div>
                 </div>
                 <div class="row">
                     <div class="col s2"></div>
                     <div class="col s8">
-                        <a href="#" class="btn waves-effect waves-light pulse primary-color-back">Conoce más</a>
+                        <a href="#portada" class="btn waves-effect waves-light pulse primary-color-back">Conoce más</a>
                     </div>
                     <div class="col s2"></div>
                 </div>
@@ -70,8 +71,27 @@
             </div>
         </div>
         </div>
-        <div>
-            <h1>Frepo</h1>
+        <div id="portada">
+           <img src="images/letters.jpg" class="back" alt="">
+           <div class="front container">
+               <div class="row marging-top">
+                   <div class="col l4 m6 s12">
+                       <div class="card">
+                           <div class="card-content black-text">
+                               <span class="card-title">
+                                   ¿Qué es Snack & Glam?
+                               </span>
+                               <p>
+                                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic ab animi laborum perspiciatis, inventore eligendi voluptatibus soluta beatae sapiente doloribus modi eveniet aspernatur aut repellat sed dolor quia nisi tempore!
+                               </p>
+                           </div>
+                           <div class="card-action">
+                               <a href="">¿Y que hacen o que?</a>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
         </div>
     </main>
     
