@@ -132,6 +132,9 @@ a > .logo_nav{
     font-style: italic;
 }
 
+#sidenav-overlay {
+    z-index: 0 !important;
+}
 .textote_visible {
     font-size: 4em !important;
     text-align: center;
@@ -140,13 +143,30 @@ a > .logo_nav{
     font-weight: 600;
 }
 
+/*.userView {
+    background: url(../images/letters-back-poster.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}*/
+
 .pedir{
     margin-top: 60vh !important;
     width: 50%;
     margin-left: 25%;
-
-    
 } 
+
+.imagen-footer {
+    height: 30vh !important;
+    margin-top: 5%;
+    width: 20vw;
+}
+
+.margin_ul_footer {
+    font-size: 1.2em;
+    line-height: 5vh;
+}
 
 @media screen and (max-width: 760px)
 {
@@ -165,5 +185,17 @@ a > .logo_nav{
         margin-top: 50vh !important;
         width: 80%;
         margin-left: 10%;
+    }
+    #footer-good {
+        margin-left: 0vw !important;
+        text-align: center;
+    }
+    
+    .imagen-footer {
+        width: 70vw;
+    }
+
+    .margin_ul_footer {
+        margin-left: 10vw !important;
     }
 }
