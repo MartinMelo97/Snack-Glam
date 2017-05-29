@@ -254,6 +254,53 @@
 
     <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
 
+    <script>
+        //Firebase
+var config = {
+    apiKey: "AIzaSyDO7UH6zEUUwHgbh6mc_uDkIinjdEMnyRc",
+    authDomain: "snack-glam.firebaseapp.com",
+    databaseURL: "https://snack-glam.firebaseio.com",
+    projectId: "snack-glam",
+    storageBucket: "snack-glam.appspot.com",
+    messagingSenderId: "66036333580"
+  };
+  firebase.initializeApp(config);
+    </script>
+    
+    <script>
+        $('#btnPedido').click(function(){
+    var db = firebase.database();
+    var nombre = $('#name').val();
+    var email = $('#email').val();
+    var phone = $('#phone').val();
+    var cantidadNormal = $('#cantidadNormal').val();
+    var direccion = $('#direccion').val();
+    var subtotalNormal = $('#subtotalNormal').val();
+    var cantidadMini = $('#cantidadMini').val();
+    var subtotalMini = $('#subtotalMini').val();
+    var fruta = $('#fruta option:selected').text();
+    var jarabe = $('#jarabe option:selected').text();
+    var total = $('#total').val();
+
+    db.ref('pedidos').push({
+        nombre: nombre,
+        correo: email,
+        telefono: phone,
+        cantidadNormal: cantidadNormal,
+        cantidadMini: cantidadMini,
+        direccion: direccion,
+        subtotalNormal: subtotalNormal,
+        subtotalMini: subtotalMini,
+        fruta: fruta,
+        jarabe: jarabe,
+        total:total
+    });
+});
+    </script>
+
     <script src="assets/scripts.js"></script>
+
+
+
 </body>
 </html>
