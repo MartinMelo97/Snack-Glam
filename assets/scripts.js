@@ -28,6 +28,14 @@ $('document').ready(function(){
 });
 
 var video = $('#video-background').get(0);
+
+$('.brand-logo').click(function(){
+    console.log("toco");
+    video.play();
+    $('.text').addClass('animated bounceInUp');
+    $('.text').css({display:'flex','align-items':'center'});
+    $('.logo_nav').removeClass('rotate');
+});
 $('.video-container').click(function(){
     console.log("toco");
     video.play();
