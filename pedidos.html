@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snack & Glam</title>
+    <title>Pedidos</title>
     <link rel="stylesheet" href="assets/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
     
@@ -142,7 +143,7 @@
                 <div class="col l3 m6 s6 invisibile tormenta RangeNormal" id="">
                     <p class="primary-color">Cantidad</p>
                     <p class="range-field">
-                        <input type="range" id="cantidadNormal" min="1" max="5" />
+                        <input type="range" id="cantidadNormal" min="0" max="5" />
                     </p>
                 </div>
                 <div class="col l3 m6 s6">
@@ -160,7 +161,7 @@
                 <div class="col l3 m6 s6 invisibile RangeMini" id="">
                     <p class="primary-color">Cantidad </p>
                     <p class="range-field">
-                        <input type="range" id="cantidadMini" min="1" max="5" />
+                        <input type="range" id="cantidadMini" min="0" max="5" />
                     </p>
                 </div>
             </div>
@@ -180,24 +181,24 @@
             </div>
             <div class="row center-align">
                 <div class="input-field col l12 m12 s12">
-                    <select>
+                    <select id="fruta">
                         <option value="" disabled selected>Selecciona una fruta</option>
                         <option value="fresa">Fresa</option>
                         <option value="mango">Mango</option>
                         <option value="uva">Uva</option>
                     </select>
-                    <label for="">Frutas disponibles para añadir:</label>
+                    <label for="fruta">Frutas disponibles para añadir:</label>
                 </div>
             </div>
              <div class="row center-align">
                 <div class="input-field col l12 m12 s12">
-                    <select>
+                    <select id="jarabe">
                         <option value="" disabled selected>Selecciona un jarabe</option>
                         <option value="lechera">Lechera</option>
                         <option value="nutella">Nutella</option>
                         <option value="chocolate">Chocolate</option>
                     </select>
-                    <label for="">Frutas disponibles para añadir:</label>
+                    <label for="jarabe">Frutas disponibles para añadir:</label>
                 </div>
             </div>
             <div class="row center-align">
@@ -243,12 +244,6 @@
             </div>
         </div>
         </div>
-        <div class="footer-copyright">
-        <div class="container">
-        © Actosoft Community 2017
-        
-        </div>
-        </div>
     </footer>
     <script
     src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -256,6 +251,8 @@
     crossorigin="anonymous"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
 
     <script src="assets/scripts.js"></script>
 </body>

@@ -1,9 +1,17 @@
+
+
 $('document').ready(function(){
      $(".button-collapse").sideNav();
      $('.parallax').parallax();  
     $('select').material_select();
     $('.materialboxed').materialbox();
+    $('#cantidadNormal').val(0);
+    $('#cantidadMini').val(0);
     $('.video-containerr').css({'padding-top':paddingtop.toString()+" px"});
+    var db = firebase.database();
+        db.ref('pedidos').on('child_added',function(data){
+            $('#pedidos').append('<div class="card"><div class="card-image waves-effect waves-block waves-light"><img class="activator" src="images/makeof.jpg"></div><div class="card-content"><span class="card-title activator grey-text text-darken-4">'+data.val().nombre+'</span><p class="puesto">'+data.val().correo+'<i class="material-icons right">search</i></p></div>div class="card-reveal accent-color-back"><span class="card-title white-text"><b>Total: '+data.val().total+'<i class="material-icons right">close</i></b></span></div></div>')
+        });
     console.log(paddingtop.toString());
     console.log($('.video-containerr').css('padding-top'));
 
@@ -25,6 +33,18 @@ $('document').ready(function(){
         }
     });
 });
+
+
+//Firebase
+var config = {
+    apiKey: "AIzaSyDO7UH6zEUUwHgbh6mc_uDkIinjdEMnyRc",
+    authDomain: "snack-glam.firebaseapp.com",
+    databaseURL: "https://snack-glam.firebaseio.com",
+    projectId: "snack-glam",
+    storageBucket: "snack-glam.appspot.com",
+    messagingSenderId: "66036333580"
+  };
+  firebase.initializeApp(config);
 
 var video = $('#video-background').get(0);
 
@@ -112,3 +132,54 @@ function calcularTotal(){
 
     $('#total').val(total);
 }
+var db = firebase.database();
+$('#btnPedido').click(function(){
+    var nombre = $('#name').val();
+    var email = $('#email').val();
+    var phone = $('#phone').val();
+    var cantidadNormal = $('#cantidadNormal').val();
+    var subtotalNormal = $('#subtotalNormal').val();
+    var cantidadMini = $('#cantidadMini').val();
+    var subtotalMini = $('#subtotalMini').val();
+    var fruta = $('#fruta option:selected').text();
+    var jarabe = $('#jarabe option:selected').text();
+    var total = $('#total').val();
+
+    db.ref('pedidos').push({
+        nombre: nombre,
+        correo: email,
+        telefono: phone,
+        cantidadNormal: cantidadNormal,
+        cantiadMini: cantidadMini,
+        subtotalNormal: subtotalNormal,
+        subtotalMini: subtotalMini,
+        fruta: fruta,
+        jarabe: jarabe,
+        total:total
+    });
+});
+
+$('#btnLogin').click(function(){
+    var correo = $('#correoMail').val();
+    var pass = $('#contra').val();
+    firebase.auth().signInWithEmailAndPassword(correo, pass)
+        .catch(function(error){
+            var errorCode = error.code;
+            var errorMessage = error.message;
+        });
+});
+
+firebase.auth().onAuthStateChanged(function(user)
+{
+   if(user)
+   {
+       $('.pedidospedidos').html("Hola");
+        console.log("Existo");
+        var db = firebase.database();
+        db.ref('pedidos').on('child_added', function(data){
+            console.log("extro");
+            console.log(data.val());
+            $('.pedidospedidos').append('<div class="card"><div class="card-image waves-effect waves-block waves-light"><img class="activator" src="images/makeof.jpg"></div><div class="card-content"><span class="card-title activator grey-text text-darken-4">'+data.val().nombre+'</span><p class="puesto">'+data.val().correo+'<i class="material-icons right">search</i></p></div>div class="card-reveal accent-color-back"><span class="card-title white-text"><b>Total: '+data.val().total+'<i class="material-icons right">close</i></b></span></div></div>')
+        });
+   } 
+});

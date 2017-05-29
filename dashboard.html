@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
+    <title>Snack & Glam</title>
     <link rel="stylesheet" href="assets/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
     
@@ -16,7 +15,7 @@
         <div class="navbar-fixed">
         <nav id="elnav">
             <div class="nav-wrapper primary-color-back">
-                <a href="index.html" class="brand-logo center">
+                <a href="#!" class="brand-logo center">
                     <img src="images/logo.jpg" alt="" class="circle logo_nav rotate">
                 </a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -53,51 +52,44 @@
         </nav>
         </div>    
     </header>
+    
     <main>
-         <div class=" activities paddingbottom">
-            <div class="container mobile-all-width">
+        <div class="activities paddingbottom">
+           <div class="container mobile-all-width">
                 <div class="row center-align margin-top-row">
                     <div class="col l12 m12 s12">
-                        <p class="textote_visible third-color">Contacto</p>
+                        <p class="textote_visible third-color">Inicia sesión</p>
                     </div>
                 </div>
-                <div class="row margin-top-row center-align">
-                    <div class="col l12 m12 s12">
-                        <p class="cadatextotetito margin-top-row">Tu opinión acerca de nosotros y de nuestro producto es muy importante para poder seguir creciendo!</p>
-                        <p class="cadatextotetito margin-top-row">Abajo encontrarás un pequeño formulario donde podrás compartir tu experiencia de nuestros productos, hacernos quejas, sugerencias, críticas constructivas, todo es bienvenido!</p>
+
+                <div class="row center-align margin-top-row">
+                    <div class="col l10 m10 s12 offset-l1 offset-m1">
+                        <div class="input-field">
+                            <label for="correoMail">Correo Electrónico</label>
+                            <input type="email" id="correoMail" class="validate">
+                        </div>
                     </div>
                 </div>
-                <div class="row margin-top-row center-align">
-                    <div class="col l6 m6 s12">
+                <div class="row center-align margin-top-row">
+                    <div class="col l10 m10 s12 offset-l1 offset-m1">
                         <div class="input-field">
-                            <i class="material-icons prefix">account_circle</i>
-                            <label for="nameContact">Nombre Completo</label>
-                            <input type="text" id="nameContact">
+                            <label for="contra">Correo Electrónico</label>
+                            <input type="password" id="contra" class="validate">
                         </div>
                     </div>
-                    <div class="col l6 m6 s12">
-                        <div class="input-field">
-                            <i class="material-icons prefix">email</i>
-                            <label for="emailContact">Correo Electrónico</label>
-                            <input type="text" id="emailContact">
-                        </div>
-                    </div>
-                    <div class="col l12 m12 s12">
-                        <div class="input-field">
-                            <i class="material-icons prefix">mode_edit</i>
-                            <textarea id="opinion" class="materialize-textarea"></textarea>
-                            <label for="opinion">Escribe aquí tu opinión, queja, etc...</label>
-                        </div>
-                    </div>
-                </div> 
-            </div>
-            <div class="row center-align">
+                </div>
+                <div class="row center-align">
                 <div class="col s10 m10 l10 offset-s1 offset-l1 offset-m1">
-                    <a id="btnContact"class="waves-effect waves-light btn-large primary-color-back"><i class="material-icons right">send</i>Enviar</a>
+                    <a id="btnLogin" class="waves-effect waves-light btn-large primary-color-back" style="width: 100%;"><i class="material-icons right">send</i>Ingresar</a>
                 </div>
             </div>
-         </div>
+            <div class="row center-align margin-top-row pedidospedidos">
+                
+            </div>
+           </div>
+        </div>
     </main>
+    
     <footer class="page-footer primary-color-back">
         <div class="container">
         <div class="row" id="footer-good">
@@ -125,7 +117,6 @@
             </div>
         </div>
         </div>
-       
     </footer>
     <script
     src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -133,6 +124,8 @@
     crossorigin="anonymous"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
 
     <script src="assets/scripts.js"></script>
 </body>
