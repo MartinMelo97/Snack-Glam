@@ -138,6 +138,7 @@ $('#btnPedido').click(function(){
     var email = $('#email').val();
     var phone = $('#phone').val();
     var cantidadNormal = $('#cantidadNormal').val();
+    var direccion = $('#direccion').val();
     var subtotalNormal = $('#subtotalNormal').val();
     var cantidadMini = $('#cantidadMini').val();
     var subtotalMini = $('#subtotalMini').val();
@@ -150,7 +151,8 @@ $('#btnPedido').click(function(){
         correo: email,
         telefono: phone,
         cantidadNormal: cantidadNormal,
-        cantiadMini: cantidadMini,
+        cantidadMini: cantidadMini,
+        direccion: direccion,
         subtotalNormal: subtotalNormal,
         subtotalMini: subtotalMini,
         fruta: fruta,
@@ -172,14 +174,11 @@ $('#btnLogin').click(function(){
 firebase.auth().onAuthStateChanged(function(user)
 {
    if(user)
-   {
-       $('.pedidospedidos').html("Hola");
-        console.log("Existo");
+   { 
         var db = firebase.database();
         db.ref('pedidos').on('child_added', function(data){
-            console.log("extro");
-            console.log(data.val());
-            $('.pedidospedidos').append('<div class="card"><div class="card-image waves-effect waves-block waves-light"><img class="activator" src="images/makeof.jpg"></div><div class="card-content"><span class="card-title activator grey-text text-darken-4">'+data.val().nombre+'</span><p class="puesto">'+data.val().correo+'<i class="material-icons right">search</i></p></div>div class="card-reveal accent-color-back"><span class="card-title white-text"><b>Total: '+data.val().total+'<i class="material-icons right">close</i></b></span></div></div>')
+            $('.pedidospedidos').append('<div class="col l4 m6 s12"><div class="card"><div class="card-image waves-effect waves-block waves-light"><img class="activator" src="images/makeof.jpg"></div><div class="card-content"><span class="card-title activator grey-text text-darken-4">'+data.val().nombre+'</span><p class="puesto">'+data.val().correo+'<i class="material-icons right">search</i></p></div><div class="card-reveal accent-color-back"><span class="card-title white-text"><b>Total: $'+data.val().total+'<i class="material-icons right">close</i></b></span><p class="white-text">Paquetes Normales: '+data.val().cantidadNormal+'</p><p class="white-text">Paquetes mini: '+data.val().cantidadMini+'</p><p class="white-text">Fruta seleccionada: '+data.val().fruta+'</p><p class="white-text">Jarabe seleccionado: '+data.val().jarabe+'</p><p class="white-text">Teléfono: '+data.val().telefono+'</p><p class="white-text">Dirección de envio: '+data.val().direccion+'</p></div></div></div>');
+            
         });
    } 
 });
