@@ -40,6 +40,7 @@ body{
 
 a > .logo_nav{
     height: 15vh;
+    z-index: 9999;
 }
 
 .rotate {

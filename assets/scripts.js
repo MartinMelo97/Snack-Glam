@@ -29,7 +29,7 @@ $('document').ready(function(){
 
 var video = $('#video-background').get(0);
 
-$('.brand-logo').click(function(){
+$('.brand-logo').on('touchstart click',function(){
     console.log("toco");
     video.play();
     $('.text').addClass('animated bounceInUp');
@@ -41,6 +41,7 @@ $('.video-container').click(function(){
     video.play();
     $('.text').addClass('animated bounceInUp');
     $('.text').css({display:'flex','align-items':'center'});
+    $('.logo_nav').removeClass('rotate');
 });
 
 $('.text').click(function(){
