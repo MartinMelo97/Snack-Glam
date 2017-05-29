@@ -53,17 +53,182 @@
         </div>    
     </header>
     <main>
+        <div class="accent-color-back activities paddingbottom">
+            <div class="container mobile-all-width">
+                <div class="row center-align margin-top-row">
+                    <div class="col l12 m12 s12">
+                        <p class="textote_visible third-color">Productos!</p>
+                    </div>
+                </div>
+                <div class="row margin-top-row center-align">
+                    <div class="col l12 m12 s12">
+                        <p class="cadatextotetito margin-top-row">Contamos con 2 paquetes de nuestros productos, cada uno consta de 3 piezas</p>
+                    </div>
+                </div>
 
+                <div class="row margin-top-row center-align">
+                    <div class="col l4 m6 s12 offset-l2 ">
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                            <img src="images/makeof.jpg">
+                            </div>
+                            <div class="card-content">
+                            <p class="puesto">3 bolicakes tamaño normal - $32.00</p>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col l4 m6 s12 ">
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                            <img src="images/makeof.jpg">
+                            </div>
+                            <div class="card-content">
+                            <p class="puesto">3 bolicakes tamaño mini - $15.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="activities paddingbottom">
+            <div class="container mobile-all-width">
+            <div class="row center-align margin-top-row">
+                <div class="col l12 m12 s12">
+                    <p class="textote_visible primary-color">Realiza tu pedido</p>
+                </div>
+            </div>
+            <div class="row center-align margin-top-row">
+                <div class="col l6 m6 s12">
+                    <div class="input-field">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input type="text" id="name" class="validate">
+                        <label for="name">Nombre Completo</label>
+                    </div>
+                </div>
+                <div class="col l6 m6 s12">
+                    <div class="input-field">
+                        <i class="material-icons prefix">email</i>
+                        <input type="email" id="email" class="validate">
+                        <label for="email">Correo Electrónico</label>
+                    </div>
+                </div>
+                <div class="col l6 m6 s12">
+                    <div class="input-field">
+                        <i class="material-icons prefix">phone</i>
+                        <input type="number" id="phone" class="validate">
+                        <label for="phone">Teléfono</label>
+                    </div>
+                </div>
+                <div class="col l6 m6 s12">
+                    <div class="input-field">
+                        <i class="material-icons prefix">location_on</i>
+                        <input type="text" id="direccion" class="validate">
+                        <label for="direccion">Dirección de envío </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row center-align">
+                <div class="col l3 m6 s6 tormenta">
+                    <div class="switch">
+                        <p class="primary-color">¿Tamaño normal?</p>
+                        <label>
+                        No
+                        <input type="checkbox" id="checkboxNormal">
+                        <span class="lever"></span>
+                        Si
+                    </div>
+                   
+                </div>
+                <div class="col l3 m6 s6 invisibile tormenta RangeNormal" id="">
+                    <p class="primary-color">Cantidad</p>
+                    <p class="range-field">
+                        <input type="range" id="cantidadNormal" min="1" max="5" />
+                    </p>
+                </div>
+                <div class="col l3 m6 s6">
+                    <div class="switch">
+                        <p class="primary-color">¿Tamaño mini?</p>
+                        <label>
+                        No
+                        <input type="checkbox" id="checkboxMini">
+                        <span class="lever"></span>
+                        Si
+                        
+                    </div>
+                    
+                </div>
+                <div class="col l3 m6 s6 invisibile RangeMini" id="">
+                    <p class="primary-color">Cantidad </p>
+                    <p class="range-field">
+                        <input type="range" id="cantidadMini" min="1" max="5" />
+                    </p>
+                </div>
+            </div>
+            <div class="row center-align">
+                <div class="col l6 m6 s6 RangeNormal invisibile">
+                    <div class="input-file">
+                        <label for="subtotalNormal">Subtotal Normal</label>
+                        <input disabled type="number" id="subtotalNormal">
+                    </div>
+                </div>
+                <div class="col l6 m6 s6 RangeMini invisibile">
+                    <div class="input-file">
+                        <label for="subtotalMini">Subtotal Mini</label>
+                        <input disabled type="number" id="subtotalMini">
+                    </div>
+                </div>
+            </div>
+            <div class="row center-align">
+                <div class="input-field col l12 m12 s12">
+                    <select>
+                        <option value="" disabled selected>Selecciona una fruta</option>
+                        <option value="fresa">Fresa</option>
+                        <option value="mango">Mango</option>
+                        <option value="uva">Uva</option>
+                    </select>
+                    <label for="">Frutas disponibles para añadir:</label>
+                </div>
+            </div>
+             <div class="row center-align">
+                <div class="input-field col l12 m12 s12">
+                    <select>
+                        <option value="" disabled selected>Selecciona un jarabe</option>
+                        <option value="lechera">Lechera</option>
+                        <option value="nutella">Nutella</option>
+                        <option value="chocolate">Chocolate</option>
+                    </select>
+                    <label for="">Frutas disponibles para añadir:</label>
+                </div>
+            </div>
+            <div class="row center-align">
+                <div class="col l6 m8 s12 offset-l3 offset-m2">
+                    <div class="input-file">
+                        <label for="total">Total a pagar</label>
+                        <input disabled type="number" id="total">
+                    </div>
+                </div>
+            </div>
+            <div class="row center-align">
+                <div class="col s10 m10 l10 offset-s1 offset-l1 offset-m1">
+                    <a id="btnPedido" class="waves-effect waves-light btn-large primary-color-back" style="width: 100%;"><i class="material-icons right">send</i>Hacer pedido</a>
+                </div>
+            </div>
+            </div>
+        </div>
     </main>
-    <footer class="page-footer primary-color-back">
+   <footer class="page-footer primary-color-back">
         <div class="container">
         <div class="row" id="footer-good">
-            <div class="col l6 s12">
+            <div class="col l4 s12">
             <h5 class="white-text"><b>Snack & Glam</b></h5>
             <p class="grey-text text-lighten-4"><i>Un círculo de sabor y nutrición</i></p>
             <img src="images/they.jpg" alt="" class="imagen-footer">
             </div>
-            <div class="col l4 offset-l2 s12">
+            <div class="col l4 s12 center-align">
+            <a href="https://www.facebook.com/snackandglam/"><img src="images/facebook.png" alt=""></a>
+            <a href="https://www.instagram.com/snackandglam/" class="twitter-icon"><img src="images/twitter.png" alt=""></a>
+            </div>
+            <div class="col l4 s12">
             <h5 class="white-text"><b>Conceptos</b></h5>
             <ul style="text-align: justify;" class="margin_ul_footer">
                 <li><a class="grey-text text-lighten-3" href="calidad/conceptos.html">Conceptos de Calidad</a></li>

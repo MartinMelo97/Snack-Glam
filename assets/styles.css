@@ -239,6 +239,10 @@ a > .logo_nav{
     padding-bottom: 10vh;
 }
 
+.invisibile {
+    visibility: hidden;
+}
+
 .card-image {
     max-height: 40vh !important;
 }
@@ -292,6 +296,14 @@ a > .logo_nav{
     line-height: 5vh;
 }
 
+.videoaux{
+    width: 80%;
+    height: 70%;
+}
+
+.maps{
+    margin-top: 10vh;
+}
 @media screen and (max-width: 760px)
 {
     .textote {
@@ -339,4 +351,11 @@ a > .logo_nav{
         margin-top: 0;
     }
 
+    .tormenta {
+        margin-bottom: 5vh;
+    }
+
+    .maps{
+        width: 90vw !important;
+    }
 }

@@ -1,6 +1,7 @@
 $('document').ready(function(){
      $(".button-collapse").sideNav();
-     $('.parallax').parallax();
+     $('.parallax').parallax();  
+    $('select').material_select();
     // $('.logo_nav').css({'margin-top':'50vh'});
     var paddingtop = $('#elnav').height();
     console.log(typeof(paddingtop));
@@ -49,15 +50,67 @@ $('.text').click(function(){
     video.play();
 });
 
-/*$(document).on('scroll', function(){
-    var scrollT = $(document).scrollTop();
-
-    if(scrollT > 500)
+$('#checkboxNormal').on('change', function(){
+    if(this.checked)
     {
-        $('.logo_nav').css({'margin-top':'0vh'});
+        $('.RangeNormal').removeClass('invisibile');
+        calcularSubtotalNormal();
     }
     else
     {
-        $('.logo_nav').css({'margin-top':'50vh'});
+        $('.RangeNormal').addClass('invisibile');
+        $('#subtotalNormal').val(0);
+        calcularTotal();
     }
-})*/
+});
+
+$('#checkboxMini').on('change', function(){
+    if(this.checked)
+    {
+        $('.RangeMini').removeClass('invisibile');
+        calcularSubtotalMini();
+    }
+    else
+    {
+        $('.RangeMini').addClass('invisibile');
+        $('#subtotalMini').val(0);
+        calcularTotal();
+    }
+});
+
+$('#cantidadNormal').on('change', calcularSubtotalNormal);
+
+$('#cantidadMini').on('change', calcularSubtotalMini);
+
+function calcularSubtotalNormal(){
+    var cantNormal = $('#cantidadNormal').val();
+        var normal = 35;
+        var subNormal = cantNormal*normal;
+        $('#subtotalNormal').val(subNormal);
+        calcularTotal();
+}
+
+function calcularSubtotalMini(){
+    var cantmini = $('#cantidadMini').val();
+        var mini = 15;
+        var submini = cantmini*mini;
+        $('#subtotalMini').val(submini);
+        calcularTotal();
+}
+
+function calcularTotal(){
+    var subNorm = $('#subtotalNormal').val();
+    var subMini = $('#subtotalMini').val();
+    var total = 0;
+    if(subNorm > 0)
+    {
+        total = total + parseInt(subNorm);
+    }
+
+    if(subMini > 0)
+    {
+        total = total + parseInt(subMini);
+    }
+
+    $('#total').val(total);
+}
