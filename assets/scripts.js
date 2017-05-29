@@ -2,9 +2,7 @@ $('document').ready(function(){
      $(".button-collapse").sideNav();
      $('.parallax').parallax();  
     $('select').material_select();
-    // $('.logo_nav').css({'margin-top':'50vh'});
-    var paddingtop = $('#elnav').height();
-    console.log(typeof(paddingtop));
+    $('.materialboxed').materialbox();
     $('.video-containerr').css({'padding-top':paddingtop.toString()+" px"});
     console.log(paddingtop.toString());
     console.log($('.video-containerr').css('padding-top'));

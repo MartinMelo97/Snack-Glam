@@ -304,6 +304,12 @@ a > .logo_nav{
 .maps{
     margin-top: 10vh;
 }
+
+.titulitosparadiapositivas
+{
+    font-size: 1.2em;
+    font-weight: 500;
+}
 @media screen and (max-width: 760px)
 {
     .textote {
@@ -357,5 +363,9 @@ a > .logo_nav{
 
     .maps{
         width: 90vw !important;
+    }
+
+    .whenmobilemargin{
+        margin-top: 5vh !important;
     }
 }
