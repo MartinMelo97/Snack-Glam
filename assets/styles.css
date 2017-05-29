@@ -35,11 +35,15 @@ body{
 }
 
 .third-color-back {
-    background-color: #BA9A79 !important;
+    background-color: #8F5944 !important;
 }
 
 .third-color {
-    color: #BA9A79 !important;
+    color: #8F5944 !important;
+}
+
+.twitter-icon{
+    margin-top: 2vh; display: block;
 }
 
 a > .logo_nav{
@@ -231,12 +235,21 @@ a > .logo_nav{
     padding-bottom: 10vh;
 }
 
+.paddingbottom {
+    padding-bottom: 10vh;
+}
+
 .card-image {
     max-height: 40vh !important;
 }
 
 .puesto{
     text-decoration: underline;
+}
+
+.collapsible-body {
+    background-color: #07BDBF !important;
+    color: #fff;
 }
 
 .minibio {
@@ -320,6 +333,10 @@ a > .logo_nav{
 
     .activities {
         height: auto;
+    }
+
+    .twitter-icon{
+        margin-top: 0;
     }
 
 }
