@@ -23,6 +23,10 @@ body{
     padding-bottom: 0 !important;
 }
 
+.activities{
+    height: auto !important;
+}
+
 .accent-color-back{
     background-color: #E4CEA9 !important;
 }
@@ -210,6 +214,36 @@ a > .logo_nav{
     font-weight: 450;
 }
 
+.cadatextotetito {
+    font-size: 1.5em !important;
+    text-align: justify;
+    padding-top: 3vh;
+    font-weight: 400;
+}
+
+#quienes-somos {
+    background: url('images/they.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index: -2;
+    padding-bottom: 10vh;
+}
+
+.card-image {
+    max-height: 40vh !important;
+}
+
+.puesto{
+    text-decoration: underline;
+}
+
+.minibio {
+    padding-top: 10vh;
+    font-size: 1.2em;
+    text-align: justify;
+}
 .members {
     text-align: center;
 }
@@ -283,4 +317,9 @@ a > .logo_nav{
     #datos-escuela {
         height: 200vh !important;
     }
+
+    .activities {
+        height: auto;
+    }
+
 }
